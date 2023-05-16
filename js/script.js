@@ -1,5 +1,13 @@
-// Copyright (c) 2020 Mr. Coxall All rights reserved
+// Copyright (c) 2023 Jaden Plugowsky All rights reserved
 //
-// Created by: Mr. Coxall
-// Created on: Sep 2020
+// Created by: Jaden Plugowsky
+// Created on: March 2023
 // This file contains the JS functions for index.html
+
+"use strict";
+
+function buttonOneClicked() {
+  alert("Hello, World!");
+  document.getElementById("answer").innerHTML =
+    "The answer is: " + "insert answer here";
+}
