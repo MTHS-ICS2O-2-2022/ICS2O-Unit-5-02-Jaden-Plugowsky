@@ -44,6 +44,10 @@ a {
   color: white;
 }
 
+.page-content-answer {
+  font-size: 20px;
+}
+
 #button-one {
   margin-left: 60px;
   margin-top: 10px;
