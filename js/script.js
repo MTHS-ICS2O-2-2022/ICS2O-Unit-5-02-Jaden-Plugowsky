@@ -8,9 +8,9 @@
 
 const randomNumber = Math.floor(Math.random() * (6 - -7)) + -7
 // Generates a random number from -7 to 6 (equal number of negative and positive numbers, as 0 is counted as positive for simplicity)
-let numberPolarity = null
-let polarityWord = ""
-let revealed = false
+let numberPolarity = null // for keeping track of the number's polarity for comparison with the user's guess
+let polarityWord = "" // for stating the polarity in responses without excessive amounts of if statements
+let revealed = false // for enabling the toggle feature on the "Toggle Answer" button; isn't necessary for the actual process
 
 if (randomNumber >= 0) {
   numberPolarity = 1 // positive
@@ -18,6 +18,7 @@ if (randomNumber >= 0) {
   numberPolarity = 0 // negative
 }
 
+// for simplifying polarity in responses
 if (numberPolarity == 1) {
   polarityWord = "positive"
 }
@@ -28,8 +29,11 @@ if (numberPolarity == 0) {
 function guessPressed() {
   // a value of 1 means positive
   // a value of 0 means negative
-  let userGuess = null
+  let userGuess = null // for keeping track of the user's guess; set to null for later changing
   let positiveButtonChecked = document.getElementById("positive").checked
+  /** For checking if the "Positive" radio button is selected, and by extension, the opposite button as well.
+   *  Feeds into userGuess below to set userGuess to the user's guessed polarity.
+   */
 
   if (positiveButtonChecked === true) {
     /**
@@ -65,7 +69,10 @@ function revealAnswerPressed() {
       polarityWord +
       "."
     revealed = true
-  } else if (revealed === true) {
+  } else if (revealed === true) { 
+    /** Yes, I used an elseif before the assignment where we learn it.
+     *  Well, it was for the toggle feature I added, which was completely unnecessary to begin with.
+     */
     document.getElementById("revealAnswer").innerHTML = ""
     revealed = false
   }
