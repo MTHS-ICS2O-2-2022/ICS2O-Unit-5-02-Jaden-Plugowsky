@@ -69,7 +69,7 @@ function revealAnswerPressed() {
       polarityWord +
       "."
     revealed = true
-  } else if (revealed === true) { 
+  } else if (revealed === true) {
     /** Yes, I used an elseif before the assignment where we learn it.
      *  Well, it was for the toggle feature I added, which was completely unnecessary to begin with.
      */
